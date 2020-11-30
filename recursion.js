@@ -49,6 +49,24 @@ if(operacion == undefined) {
             });
             console.log();
             break
+        case 'cuenta':
+            if (n1 > n2){
+                console.log()
+                console.log('Cintando para atrás entre', n1, 'y', n2, ':')
+                array = operaciones.cuentaAtras(n2, n1)    
+                array.forEach(element => {
+                    console.log(element)
+                });
+                console.log();
+            } else {
+                console.log('Lista de números entre', n1, 'y', n2, 'es:')
+                array = operaciones.cuentaAdelante(n1, n2)    
+                array.forEach(element => {
+                    console.log(element)
+                });
+                console.log();
+            }
+            break
         default:
             console.log();
             console.log('La operación no existe. Vuelve a ingresar los datos');
