@@ -27,13 +27,25 @@ if(operacion == undefined) {
             console.log('El divisor común mayor de', n1, 'y', n2, 'es:', operaciones.dcm(n1, n2));
             console.log();
             break
-        case 'ldn':
-        case 'listaDeNumeros':
+        case 'cad':
+        case 'cuentaAdelante':
             console.log();
-            console.log('Lista de números entre', n1, 'y', n2, 'es:')
-            array = operaciones.listaDeNumeros(n1, n2)    
+            n1 > n2 ? console.log("El segundo número debe ser mayor que el primero")
+            : console.log('Lista de números entre', n1, 'y', n2, 'es:')
+            array = operaciones.cuentaAdelante(n1, n2)    
             array.forEach(element => {
                 console.log(element)
+            });
+            console.log();
+            break
+        case 'cat':
+        case 'cuentaAtras':
+            console.log();
+            n1 > n2 ? console.log("El segundo número debe ser mayor que el primero")
+            : console.log('Cintando para atrás entre', n1, 'y', n2, ':')
+            array = operaciones.cuentaAtras(n1, n2)    
+            array.forEach(element => {
+            console.log(element)
             });
             console.log();
             break
