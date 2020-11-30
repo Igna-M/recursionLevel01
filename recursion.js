@@ -13,7 +13,8 @@ if(operacion == undefined) {
     console.log('luego ingresá dos números. Separá cada elemento con espacio');
     console.log('Las operaciones posibles son:');
     console.log('DivisorComunMayor (dcm), de dos números');
-    console.log('listaDeNumeros (ldn), entre dos números');
+    console.log('lista, que imprime todos los números entre los dos que elijas');
+    console.log('si elegis lista, el programa se da cuenta si querés que cuente para adelante o para atras.');
     console.log();
 } else if (isNaN(n1) || isNaN(n2)){
     console.log();
@@ -27,29 +28,7 @@ if(operacion == undefined) {
             console.log('El divisor común mayor de', n1, 'y', n2, 'es:', operaciones.dcm(n1, n2));
             console.log();
             break
-        case 'cad':
-        case 'cuentaAdelante':
-            console.log();
-            n1 > n2 ? console.log("El segundo número debe ser mayor que el primero")
-            : console.log('Lista de números entre', n1, 'y', n2, 'es:')
-            array = operaciones.cuentaAdelante(n1, n2)    
-            array.forEach(element => {
-                console.log(element)
-            });
-            console.log();
-            break
-        case 'cat':
-        case 'cuentaAtras':
-            console.log();
-            n1 > n2 ? console.log("El segundo número debe ser mayor que el primero")
-            : console.log('Cintando para atrás entre', n1, 'y', n2, ':')
-            array = operaciones.cuentaAtras(n1, n2)    
-            array.forEach(element => {
-            console.log(element)
-            });
-            console.log();
-            break
-        case 'cuenta':
+        case 'lista':
             if (n1 > n2){
                 console.log()
                 console.log('Cintando para atrás entre', n1, 'y', n2, ':')
@@ -72,6 +51,4 @@ if(operacion == undefined) {
             console.log('La operación no existe. Vuelve a ingresar los datos');
             console.log();
     }
-
 }
-
